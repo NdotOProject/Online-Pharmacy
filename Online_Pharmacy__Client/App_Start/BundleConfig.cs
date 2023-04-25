@@ -25,6 +25,10 @@ namespace Online_Pharmacy__Client
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // add
+            bundles.Add(new ScriptBundle("~/bundles/layout-controller").Include(
+                      "~/Scripts/layout-controller.js"));
         }
     }
 }
