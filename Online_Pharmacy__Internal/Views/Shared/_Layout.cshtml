@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="row" style="margin:0;">
+    <div class="col-md-12">
+        <div id="header"></div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <div id="left_menu"></div>
+            </div>
+            <div class="col-md-8">
+                <div class="container body-content">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="right_bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 navbar-fixed-bottom">
+        <div id="footer"></div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/layout-controller")
+    @RenderSection("scripts", required: false)
+    <script>
+        LoadAndSetPageInto('header', '/Layout/GetHeader');
+        LoadAndSetPageInto('left_menu', '/Layout/GetLeftMenu');
+        LoadAndSetPageInto('right_bar', '/Layout/GetRightBar');
+        LoadAndSetPageInto('footer', '/Layout/GetFooter');
+    </script>
+</body>
+</html>
