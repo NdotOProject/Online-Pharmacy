@@ -28,8 +28,9 @@ namespace Online_Pharmacy__Server.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int GenderID { get; set; }
-        public string Email { get; set; }
+        public System.DateTime DOB { get; set; }
         public string Phone { get; set; }
+        public string Email { get; set; }
         public string Address { get; set; }
         public int OrgID { get; set; }
         public Nullable<int> ReportTo { get; set; }

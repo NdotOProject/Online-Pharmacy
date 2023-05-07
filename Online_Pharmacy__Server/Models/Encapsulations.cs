@@ -15,6 +15,8 @@ namespace Online_Pharmacy__Server.Models
     public partial class Encapsulations
     {
         public int ProductID { get; set; }
+        public string OutPut { get; set; }
+        public string CapsuleSize { get; set; }
     
         public virtual Products Products { get; set; }
     }

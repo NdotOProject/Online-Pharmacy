@@ -15,6 +15,10 @@ namespace Online_Pharmacy__Server.Models
     public partial class LiquidFillings
     {
         public int ProductID { get; set; }
+        public Nullable<double> AirPressure { get; set; }
+        public Nullable<double> AirVolume { get; set; }
+        public Nullable<int> FillingSpeed { get; set; }
+        public Nullable<int> FillingRange { get; set; }
     
         public virtual Products Products { get; set; }
     }
