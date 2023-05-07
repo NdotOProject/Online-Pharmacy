@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace Online_Pharmacy__Server.Controllers
 {
+/*
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -36,4 +37,5 @@ namespace Online_Pharmacy__Server.Controllers
         {
         }
     }
+*/
 }

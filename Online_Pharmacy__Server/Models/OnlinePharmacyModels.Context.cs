@@ -37,7 +37,6 @@ namespace Online_Pharmacy__Server.Models
         public virtual DbSet<Groups> Groups { get; set; }
         public virtual DbSet<LiquidFillings> LiquidFillings { get; set; }
         public virtual DbSet<Organizations> Organizations { get; set; }
-        public virtual DbSet<PersonalDetails> PersonalDetails { get; set; }
         public virtual DbSet<ProductImages> ProductImages { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<ProductTypes> ProductTypes { get; set; }

@@ -15,6 +15,11 @@ namespace Online_Pharmacy__Server.Models
     public partial class Tablets
     {
         public int ProductID { get; set; }
+        public string ModelNumber { get; set; }
+        public Nullable<double> MaxPressure { get; set; }
+        public Nullable<double> MaxDiameter { get; set; }
+        public Nullable<double> MaxDepth { get; set; }
+        public Nullable<int> ProductionCapacity { get; set; }
     
         public virtual Products Products { get; set; }
     }

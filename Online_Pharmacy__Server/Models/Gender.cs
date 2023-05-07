@@ -17,16 +17,16 @@ namespace Online_Pharmacy__Server.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Gender()
         {
+            this.Customers = new HashSet<Customers>();
             this.Employees = new HashSet<Employees>();
-            this.PersonalDetails = new HashSet<PersonalDetails>();
         }
     
         public int ID { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employees> Employees { get; set; }
+        public virtual ICollection<Customers> Customers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonalDetails> PersonalDetails { get; set; }
+        public virtual ICollection<Employees> Employees { get; set; }
     }
 }
