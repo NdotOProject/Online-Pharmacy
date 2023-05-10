@@ -14,17 +14,8 @@ namespace Online_Pharmacy__Server.Models
     
     public partial class ProductTypes
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ProductTypes()
-        {
-            this.Products = new HashSet<Products>();
-        }
-    
         public int ID { get; set; }
         public string Name { get; set; }
         public bool Status { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Products> Products { get; set; }
     }
 }

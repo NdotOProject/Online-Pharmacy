@@ -17,7 +17,5 @@ namespace Online_Pharmacy__Server.Models
         public int ID { get; set; }
         public int ProductID { get; set; }
         public byte[] Picture { get; set; }
-    
-        public virtual Products Products { get; set; }
     }
 }

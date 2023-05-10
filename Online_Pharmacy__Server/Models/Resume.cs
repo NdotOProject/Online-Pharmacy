@@ -19,7 +19,5 @@ namespace Online_Pharmacy__Server.Models
         public string OldOrg { get; set; }
         public string Website { get; set; }
         public string Note { get; set; }
-    
-        public virtual CoverLetters CoverLetters { get; set; }
     }
 }

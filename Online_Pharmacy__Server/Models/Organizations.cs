@@ -14,13 +14,6 @@ namespace Online_Pharmacy__Server.Models
     
     public partial class Organizations
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Organizations()
-        {
-            this.Employees = new HashSet<Employees>();
-            this.Organizations1 = new HashSet<Organizations>();
-        }
-    
         public int ID { get; set; }
         public string Name { get; set; }
         public Nullable<int> Parent { get; set; }
@@ -28,11 +21,5 @@ namespace Online_Pharmacy__Server.Models
         public string Phone { get; set; }
         public string Address { get; set; }
         public string Description { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employees> Employees { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Organizations> Organizations1 { get; set; }
-        public virtual Organizations Organizations2 { get; set; }
     }
 }

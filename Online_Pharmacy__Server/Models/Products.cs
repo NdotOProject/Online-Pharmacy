@@ -14,13 +14,6 @@ namespace Online_Pharmacy__Server.Models
     
     public partial class Products
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Products()
-        {
-            this.FeedbackProduct = new HashSet<FeedbackProduct>();
-            this.ProductImages = new HashSet<ProductImages>();
-        }
-    
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -34,14 +27,5 @@ namespace Online_Pharmacy__Server.Models
         public Nullable<double> Height { get; set; }
         public Nullable<double> Weight { get; set; }
         public int Quantity { get; set; }
-    
-        public virtual Encapsulations Encapsulations { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FeedbackProduct> FeedbackProduct { get; set; }
-        public virtual LiquidFillings LiquidFillings { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductImages> ProductImages { get; set; }
-        public virtual ProductTypes ProductTypes { get; set; }
-        public virtual Tablets Tablets { get; set; }
     }
 }

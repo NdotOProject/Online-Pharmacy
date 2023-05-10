@@ -11,19 +11,10 @@ namespace Online_Pharmacy__Server.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Employees
+    using OnlinePharmacy.DTO.Models.User;
+
+    public partial class Employees : IUser
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Employees()
-        {
-            this.Employees1 = new HashSet<Employees>();
-            this.FeedbackProduct = new HashSet<FeedbackProduct>();
-            this.FeedbackRecruiment = new HashSet<FeedbackRecruiment>();
-            this.RecruimentNews = new HashSet<RecruimentNews>();
-            this.Users = new HashSet<Users>();
-        }
-    
         public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -37,19 +28,5 @@ namespace Online_Pharmacy__Server.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool Status { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employees> Employees1 { get; set; }
-        public virtual Employees Employees2 { get; set; }
-        public virtual Gender Gender { get; set; }
-        public virtual Organizations Organizations { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FeedbackProduct> FeedbackProduct { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FeedbackRecruiment> FeedbackRecruiment { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RecruimentNews> RecruimentNews { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users { get; set; }
     }
 }

@@ -726,12 +726,7 @@
           <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Customers" Relationship="Self.FK_CoverLetters_Customers" FromRole="CoverLetters" ToRole="Customers" />
-          <NavigationProperty Name="RecruimentNews" Relationship="Self.FK_CoverLetters_RecruimentNews" FromRole="CoverLetters" ToRole="RecruimentNews" />
-          <NavigationProperty Name="EducationDetails" Relationship="Self.FK_EducationDetails_CoverLetters" FromRole="CoverLetters" ToRole="EducationDetails" />
-          <NavigationProperty Name="FeedbackRecruiment" Relationship="Self.FK_FeedbackRecruiment_CoverLetters" FromRole="CoverLetters" ToRole="FeedbackRecruiment" />
-          <NavigationProperty Name="Resume" Relationship="Self.FK_Resume_CoverLetters" FromRole="CoverLetters" ToRole="Resume" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Customers">
           <Key>
             <PropertyRef Name="ID" />
@@ -747,10 +742,7 @@
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="CoverLetters" Relationship="Self.FK_CoverLetters_Customers" FromRole="Customers" ToRole="CoverLetters" />
-          <NavigationProperty Name="Gender" Relationship="Self.FK_Customers_Gender" FromRole="Customers" ToRole="Gender" />
-          <NavigationProperty Name="FeedbackProduct" Relationship="Self.FK_FeedbackProduct_Customers" FromRole="Customers" ToRole="FeedbackProduct" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="EducationDetails">
           <Key>
             <PropertyRef Name="LetterID" />
@@ -761,7 +753,6 @@
           <Property Name="Degree" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Certificate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="CoverLetters" Relationship="Self.FK_EducationDetails_CoverLetters" FromRole="EducationDetails" ToRole="CoverLetters" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -780,15 +771,7 @@
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Employees1" Relationship="Self.FK_Employees_Employees" FromRole="Employees" ToRole="Employees1" />
-          <NavigationProperty Name="Employees2" Relationship="Self.FK_Employees_Employees" FromRole="Employees1" ToRole="Employees" />
-          <NavigationProperty Name="Gender" Relationship="Self.FK_Employees_Gender1" FromRole="Employees" ToRole="Gender" />
-          <NavigationProperty Name="Organizations" Relationship="Self.FK_Employees_Organizations1" FromRole="Employees" ToRole="Organizations" />
-          <NavigationProperty Name="FeedbackProduct" Relationship="Self.FK_FeedbackProduct_Employees" FromRole="Employees" ToRole="FeedbackProduct" />
-          <NavigationProperty Name="FeedbackRecruiment" Relationship="Self.FK_FeedbackRecruiment_Employees" FromRole="Employees" ToRole="FeedbackRecruiment" />
-          <NavigationProperty Name="RecruimentNews" Relationship="Self.FK_RecruimentNews_Employees" FromRole="Employees" ToRole="RecruimentNews" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Employees" FromRole="Employees" ToRole="Users" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Encapsulations">
           <Key>
             <PropertyRef Name="ProductID" />
@@ -796,7 +779,6 @@
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="OutPut" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CapsuleSize" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Encapsulations_Products" FromRole="Encapsulations" ToRole="Products" />
         </EntityType>
         <EntityType Name="FeedbackProduct">
           <Key>
@@ -810,12 +792,7 @@
           <Property Name="ReplyID" Type="Int32" />
           <Property Name="ReplyBy" Type="Int32" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Customers" Relationship="Self.FK_FeedbackProduct_Customers" FromRole="FeedbackProduct" ToRole="Customers" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_FeedbackProduct_Employees" FromRole="FeedbackProduct" ToRole="Employees" />
-          <NavigationProperty Name="FeedbackProduct1" Relationship="Self.FK_FeedbackProduct_FeedbackProduct" FromRole="FeedbackProduct" ToRole="FeedbackProduct1" />
-          <NavigationProperty Name="FeedbackProduct2" Relationship="Self.FK_FeedbackProduct_FeedbackProduct" FromRole="FeedbackProduct1" ToRole="FeedbackProduct" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_FeedbackProduct_Products" FromRole="FeedbackProduct" ToRole="Products" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="FeedbackRecruiment">
           <Key>
             <PropertyRef Name="ID" />
@@ -824,9 +801,7 @@
           <Property Name="ReplyBy" Type="Int32" Nullable="false" />
           <Property Name="LetterID" Type="Int32" Nullable="false" />
           <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="CoverLetters" Relationship="Self.FK_FeedbackRecruiment_CoverLetters" FromRole="FeedbackRecruiment" ToRole="CoverLetters" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_FeedbackRecruiment_Employees" FromRole="FeedbackRecruiment" ToRole="Employees" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Functions">
           <Key>
             <PropertyRef Name="ID" />
@@ -835,18 +810,14 @@
           <Property Name="ShortDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="FullDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Groups" Relationship="Self.GroupFunction" FromRole="Functions" ToRole="Groups" />
-          <NavigationProperty Name="Users" Relationship="Self.UserFunction" FromRole="Functions" ToRole="Users" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Gender">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Gender" FromRole="Gender" ToRole="Customers" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Gender1" FromRole="Gender" ToRole="Employees" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Groups">
           <Key>
             <PropertyRef Name="ID" />
@@ -855,9 +826,7 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Functions" Relationship="Self.GroupFunction" FromRole="Groups" ToRole="Functions" />
-          <NavigationProperty Name="Users" Relationship="Self.UserGroup" FromRole="Groups" ToRole="Users" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="LiquidFillings">
           <Key>
             <PropertyRef Name="ProductID" />
@@ -867,7 +836,6 @@
           <Property Name="AirVolume" Type="Double" />
           <Property Name="FillingSpeed" Type="Int32" />
           <Property Name="FillingRange" Type="Int32" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_LiquidFillings_Products" FromRole="LiquidFillings" ToRole="Products" />
         </EntityType>
         <EntityType Name="Organizations">
           <Key>
@@ -880,10 +848,7 @@
           <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Organizations1" FromRole="Organizations" ToRole="Employees" />
-          <NavigationProperty Name="Organizations1" Relationship="Self.FK_Organizations_Organizations" FromRole="Organizations" ToRole="Organizations1" />
-          <NavigationProperty Name="Organizations2" Relationship="Self.FK_Organizations_Organizations" FromRole="Organizations1" ToRole="Organizations" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="ProductImages">
           <Key>
             <PropertyRef Name="ID" />
@@ -891,7 +856,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_ProductImages_Products" FromRole="ProductImages" ToRole="Products" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -910,13 +874,7 @@
           <Property Name="Height" Type="Double" />
           <Property Name="Weight" Type="Double" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Encapsulations" Relationship="Self.FK_Encapsulations_Products" FromRole="Products" ToRole="Encapsulations" />
-          <NavigationProperty Name="FeedbackProduct" Relationship="Self.FK_FeedbackProduct_Products" FromRole="Products" ToRole="FeedbackProduct" />
-          <NavigationProperty Name="LiquidFillings" Relationship="Self.FK_LiquidFillings_Products" FromRole="Products" ToRole="LiquidFillings" />
-          <NavigationProperty Name="ProductImages" Relationship="Self.FK_ProductImages_Products" FromRole="Products" ToRole="ProductImages" />
-          <NavigationProperty Name="ProductTypes" Relationship="Self.FK_Products_ProductTypes" FromRole="Products" ToRole="ProductTypes" />
-          <NavigationProperty Name="Tablets" Relationship="Self.FK_Tablets_Products" FromRole="Products" ToRole="Tablets" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="ProductTypes">
           <Key>
             <PropertyRef Name="ID" />
@@ -924,7 +882,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Products_ProductTypes" FromRole="ProductTypes" ToRole="Products" />
         </EntityType>
         <EntityType Name="RecruimentNews">
           <Key>
@@ -937,9 +894,7 @@
           <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CreatedBy" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="CoverLetters" Relationship="Self.FK_CoverLetters_RecruimentNews" FromRole="RecruimentNews" ToRole="CoverLetters" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_RecruimentNews_Employees" FromRole="RecruimentNews" ToRole="Employees" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Resume">
           <Key>
             <PropertyRef Name="LetterID" />
@@ -949,7 +904,6 @@
           <Property Name="OldOrg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="CoverLetters" Relationship="Self.FK_Resume_CoverLetters" FromRole="Resume" ToRole="CoverLetters" />
         </EntityType>
         <EntityType Name="Tablets">
           <Key>
@@ -961,7 +915,6 @@
           <Property Name="MaxDiameter" Type="Double" />
           <Property Name="MaxDepth" Type="Double" />
           <Property Name="ProductionCapacity" Type="Int32" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Tablets_Products" FromRole="Tablets" ToRole="Products" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -972,10 +925,7 @@
           <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="EmpID" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_Users_Employees" FromRole="Users" ToRole="Employees" />
-          <NavigationProperty Name="Functions" Relationship="Self.UserFunction" FromRole="Users" ToRole="Functions" />
-          <NavigationProperty Name="Groups" Relationship="Self.UserGroup" FromRole="Users" ToRole="Groups" />
-        </EntityType>
+          </EntityType>
         <Association Name="FK_CoverLetters_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
           <End Role="CoverLetters" Type="Self.CoverLetters" Multiplicity="*" />
@@ -1206,7 +1156,7 @@
         </Association>
         <Association Name="FK_ProductImages_Products">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
-          <End Role="ProductImages" Type="Self.ProductImages" Multiplicity="*" />
+          <End Role="ProductImages" Type="OnlinePharmacyModel.ProductImages" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Products">
               <PropertyRef Name="ID" />
@@ -1265,7 +1215,7 @@
           <EntitySet Name="Groups" EntityType="Self.Groups" />
           <EntitySet Name="LiquidFillings" EntityType="Self.LiquidFillings" />
           <EntitySet Name="Organizations" EntityType="Self.Organizations" />
-          <EntitySet Name="ProductImages" EntityType="Self.ProductImages" />
+          <EntitySet Name="ProductImages" EntityType="OnlinePharmacyModel.ProductImages" />
           <EntitySet Name="Products" EntityType="Self.Products" />
           <EntitySet Name="ProductTypes" EntityType="Self.ProductTypes" />
           <EntitySet Name="RecruimentNews" EntityType="Self.RecruimentNews" />

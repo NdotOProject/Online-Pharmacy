@@ -18,8 +18,5 @@ namespace Online_Pharmacy__Server.Models
         public int ReplyBy { get; set; }
         public int LetterID { get; set; }
         public string Content { get; set; }
-    
-        public virtual CoverLetters CoverLetters { get; set; }
-        public virtual Employees Employees { get; set; }
     }
 }

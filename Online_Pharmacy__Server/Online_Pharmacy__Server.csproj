@@ -164,27 +164,57 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\CoverLettersController.cs" />
-    <Compile Include="Controllers\EducationDetailsController.cs" />
-    <Compile Include="Controllers\EmployeesController.cs" />
-    <Compile Include="Controllers\FunctionsController.cs" />
-    <Compile Include="Controllers\GendersController.cs" />
-    <Compile Include="Controllers\GroupsController.cs" />
+    <Compile Include="Controllers\Decentralization\UsersController.cs" />
+    <Compile Include="Controllers\Product\EncapsulationsController.cs" />
+    <Compile Include="Controllers\Product\FeedbackProductsController.cs" />
+    <Compile Include="Controllers\Product\LiquidFillingsController.cs" />
+    <Compile Include="Controllers\Product\ProductImagesController.cs" />
+    <Compile Include="Controllers\Product\ProductTypesController.cs" />
+    <Compile Include="Controllers\Product\TabletsController.cs" />
+    <Compile Include="Controllers\Recruiment\CoverLettersController.cs" />
+    <Compile Include="Controllers\Recruiment\EducationDetailsController.cs" />
+    <Compile Include="Controllers\Recruiment\FeedbackRecruimentsController.cs" />
+    <Compile Include="Controllers\Recruiment\RecruimentNewsController.cs" />
+    <Compile Include="Controllers\Recruiment\ResumesController.cs" />
+    <Compile Include="Controllers\User\CustomersController.cs" />
+    <Compile Include="Controllers\User\EmployeesController.cs" />
+    <Compile Include="Controllers\Decentralization\FunctionsController.cs" />
+    <Compile Include="Controllers\User\GendersController.cs" />
+    <Compile Include="Controllers\Decentralization\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OrganizationsController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="DTOMappers\EmployeeMapper.cs" />
-    <Compile Include="DTOMappers\GenderMapper.cs" />
-    <Compile Include="DTOMappers\IMapper.cs" />
-    <Compile Include="DTOMappers\OrganizationMapper.cs" />
-    <Compile Include="DTOMappers\DecentralizationMappers.cs" />
-    <Compile Include="DTO\DecentralizationDTOClasses.cs" />
-    <Compile Include="DTO\InternalDTOClasses.cs" />
-    <Compile Include="DTO\ProductDTOClasses.cs" />
-    <Compile Include="DTO\RecruimentDTOClasses.cs" />
-    <Compile Include="DTO\ExternalDTOClasses.cs" />
-    <Compile Include="DTO\UserInfoDTOClasses.cs" />
+    <Compile Include="Controllers\User\OrganizationsController.cs" />
+    <Compile Include="Controllers\Product\ProductsController.cs" />
+    <Compile Include="Controllers\Decentralization\UsersTestController.cs" />
+    <Compile Include="DTO\Mappers\Decentralization\GroupMapper.cs" />
+    <Compile Include="DTO\Mappers\Decentralization\UserMapper.cs" />
+    <Compile Include="DTO\Mappers\User\EmployeeMapper.cs" />
+    <Compile Include="DTO\Mappers\User\GenderMapper.cs" />
+    <Compile Include="DTO\Mappers\IMapper.cs" />
+    <Compile Include="DTO\Mappers\User\OrganizationMapper.cs" />
+    <Compile Include="DTO\Mappers\Decentralization\FunctionMapper.cs" />
+    <Compile Include="DTO\Mappers\User\UserInfoMappers.cs" />
+    <Compile Include="DTO\Models\Decentralization\FunctionDTO.cs" />
+    <Compile Include="DTO\Models\Decentralization\GroupDTO.cs" />
+    <Compile Include="DTO\Models\Decentralization\UserDTO.cs" />
+    <Compile Include="DTO\Models\Product\EncapsulationDTO.cs" />
+    <Compile Include="DTO\Models\Product\FeedbackProductDTO.cs" />
+    <Compile Include="DTO\Models\Product\LiquidFillingDTO.cs" />
+    <Compile Include="DTO\Models\Product\ProductImageDTO.cs" />
+    <Compile Include="DTO\Models\Product\ProductTypeDTO.cs" />
+    <Compile Include="DTO\Models\Product\TabletDTO.cs" />
+    <Compile Include="DTO\Models\Recruiment\FeedbackRecruimentDTO.cs" />
+    <Compile Include="DTO\Models\Recruiment\CoverLetterDTO.cs" />
+    <Compile Include="DTO\Models\Recruiment\RecruimentNewsDTO.cs" />
+    <Compile Include="DTO\Models\Recruiment\ResumeDTO.cs" />
+    <Compile Include="DTO\Models\User\EmployeeDTO.cs" />
+    <Compile Include="DTO\Models\Product\ProductDTO.cs" />
+    <Compile Include="DTO\Models\Recruiment\EducationDetailsDTO.cs" />
+    <Compile Include="DTO\Models\User\CustomerDTO.cs" />
+    <Compile Include="DTO\Models\User\AccountDTO.cs" />
+    <Compile Include="DTO\Models\User\GenderDTO.cs" />
+    <Compile Include="DTO\Models\User\IUser.cs" />
+    <Compile Include="DTO\Models\User\OrganizationDTO.cs" />
+    <Compile Include="DTO\Models\User\UserInfoDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -262,8 +292,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
-    <Compile Include="Repositories\EmployeeRepository.cs" />
-    <Compile Include="Repositories\DecentralizationRepositories.cs" />
+    <Compile Include="Repositories\Decentralization\GroupRepository.cs" />
+    <Compile Include="Repositories\Decentralization\UserRepository.cs" />
+    <Compile Include="Repositories\User\EmployeeRepository.cs" />
+    <Compile Include="Repositories\Decentralization\FunctionRepository.cs" />
+    <Compile Include="Repositories\User\OrganizationRepository.cs" />
+    <Compile Include="Repositories\User\UserInfoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -335,6 +369,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DTO\Mappers\Product\" />
+    <Folder Include="DTO\Mappers\Recruiment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

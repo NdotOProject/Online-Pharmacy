@@ -14,21 +14,9 @@ namespace Online_Pharmacy__Server.Models
     
     public partial class Functions
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Functions()
-        {
-            this.Groups = new HashSet<Groups>();
-            this.Users = new HashSet<Users>();
-        }
-    
         public int ID { get; set; }
         public string ShortDescription { get; set; }
         public string FullDescription { get; set; }
         public bool Status { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Groups> Groups { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users { get; set; }
     }
 }

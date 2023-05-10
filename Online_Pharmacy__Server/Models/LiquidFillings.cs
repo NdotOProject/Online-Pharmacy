@@ -19,7 +19,5 @@ namespace Online_Pharmacy__Server.Models
         public Nullable<double> AirVolume { get; set; }
         public Nullable<int> FillingSpeed { get; set; }
         public Nullable<int> FillingRange { get; set; }
-    
-        public virtual Products Products { get; set; }
     }
 }

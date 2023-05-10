@@ -20,7 +20,5 @@ namespace Online_Pharmacy__Server.Models
         public string Degree { get; set; }
         public string Certificate { get; set; }
         public bool Status { get; set; }
-    
-        public virtual CoverLetters CoverLetters { get; set; }
     }
 }

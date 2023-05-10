@@ -14,12 +14,6 @@ namespace Online_Pharmacy__Server.Models
     
     public partial class FeedbackProduct
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FeedbackProduct()
-        {
-            this.FeedbackProduct1 = new HashSet<FeedbackProduct>();
-        }
-    
         public int ID { get; set; }
         public Nullable<int> Rate { get; set; }
         public string Content { get; set; }
@@ -28,12 +22,5 @@ namespace Online_Pharmacy__Server.Models
         public Nullable<int> ReplyID { get; set; }
         public Nullable<int> ReplyBy { get; set; }
         public bool Status { get; set; }
-    
-        public virtual Customers Customers { get; set; }
-        public virtual Employees Employees { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FeedbackProduct> FeedbackProduct1 { get; set; }
-        public virtual FeedbackProduct FeedbackProduct2 { get; set; }
-        public virtual Products Products { get; set; }
     }
 }
